@@ -1,0 +1,729 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/dcodeIO/Preprocessor.js">preprocessor (v1.4.0)</a>
+</h1>
+<h4>Preprocessor.js: A JavaScript source file preprocessor, e.g. to build different versions of a library.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preprocessor">module preprocessor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.preprocessor">
+            function <span class="apidocSignatureSpan"></span>preprocessor
+            <span class="apidocSignatureSpan">(source, baseDirOrIncludes, preserveLineNumbers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.addSlashes">
+            function <span class="apidocSignatureSpan">preprocessor.</span>addSlashes
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.evaluate">
+            function <span class="apidocSignatureSpan">preprocessor.</span>evaluate
+            <span class="apidocSignatureSpan">(runtimeDefines, inlineDefines, expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.indent">
+            function <span class="apidocSignatureSpan">preprocessor.</span>indent
+            <span class="apidocSignatureSpan">(str, indent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.nlToStr">
+            function <span class="apidocSignatureSpan">preprocessor.</span>nlToStr
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.stripSlashes">
+            function <span class="apidocSignatureSpan">preprocessor.</span>stripSlashes
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.toString">
+            function <span class="apidocSignatureSpan">preprocessor.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">preprocessor.</span>DEFINE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">preprocessor.</span>ENDIF</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">preprocessor.</span>EXPR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">preprocessor.</span>IF</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">preprocessor.</span>INCLUDE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">preprocessor.</span>PUT</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preprocessor.addSlashes">module preprocessor.addSlashes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.addSlashes.addSlashes">
+            function <span class="apidocSignatureSpan">preprocessor.</span>addSlashes
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preprocessor.evaluate">module preprocessor.evaluate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.evaluate.evaluate">
+            function <span class="apidocSignatureSpan">preprocessor.</span>evaluate
+            <span class="apidocSignatureSpan">(runtimeDefines, inlineDefines, expr)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preprocessor.indent">module preprocessor.indent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.indent.indent">
+            function <span class="apidocSignatureSpan">preprocessor.</span>indent
+            <span class="apidocSignatureSpan">(str, indent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preprocessor.nlToStr">module preprocessor.nlToStr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.nlToStr.nlToStr">
+            function <span class="apidocSignatureSpan">preprocessor.</span>nlToStr
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preprocessor.stripSlashes">module preprocessor.stripSlashes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.stripSlashes.stripSlashes">
+            function <span class="apidocSignatureSpan">preprocessor.</span>stripSlashes
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.preprocessor.toString">module preprocessor.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.preprocessor.toString.toString">
+            function <span class="apidocSignatureSpan">preprocessor.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preprocessor" id="apidoc.module.preprocessor">module preprocessor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.preprocessor" id="apidoc.element.preprocessor.preprocessor">
+        function <span class="apidocSignatureSpan"></span>preprocessor
+        <span class="apidocSignatureSpan">(source, baseDirOrIncludes, preserveLineNumbers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Preprocessor(source, baseDirOrIncludes, preserveLineNumbers) {
+
+    /**
+     * Source code to pre-process.
+     * @type {string}
+     * @expose
+     */
+    this.source = ""+source;
+
+    /**
+     * Source base directory.
+     * @type {string}
+     * @expose
+     */
+    this.baseDir = typeof baseDirOrIncludes == 'string' ? baseDirOrIncludes : ".";
+
+    /**
+     * Included sources by filename.
+     * @type {Object.&lt;string, string&gt;}
+     */
+    this.includes = typeof baseDirOrIncludes == 'object' ? baseDirOrIncludes : {};
+
+    /**
+     * Preserve line numbers when removing blocks of code
+     * @type {boolean}
+     */
+    this.preserveLineNumbers = typeof preserveLineNumbers == 'boolean' ? preserveLineNumbers : false;
+
+    /**
+     * Whether running inside of node.js or not.
+     * @type {boolean}
+     * @expose
+     */
+    this.isNode = (typeof window == 'undefined' || !window.window) &amp;&amp; typeof require == 'function';
+
+    /**
+     * Error reporting source ahead length.
+     * @type {number}
+     * @expose
+     */
+    this.errorSourceAhead = 50;
+
+    /**
+     * Runtime defines.
+     * @type {Array.&lt;string&gt;}
+     */
+    this.defines = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.addSlashes" id="apidoc.element.preprocessor.addSlashes">
+        function <span class="apidocSignatureSpan">preprocessor.</span>addSlashes
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSlashes = function (str) {
+    return (str+'').replace(/([\\"'])/g, "\\$1").replace(/\0/g, "\\0");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.evaluate" id="apidoc.element.preprocessor.evaluate">
+        function <span class="apidocSignatureSpan">preprocessor.</span>evaluate
+        <span class="apidocSignatureSpan">(runtimeDefines, inlineDefines, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">evaluate = function (runtimeDefines, inlineDefines, expr) {
+    if (typeof inlineDefines === 'string') {
+        expr = inlineDefines;
+        inlineDefines = [];
+    }
+    var addSlashes = Preprocessor.addSlashes;
+    return (function(runtimeDefines, inlineDefines, expr) {
+        for (var key in runtimeDefines) {
+            if (runtimeDefines.hasOwnProperty(key)) {
+                eval("var "+key+" = \""+addSlashes(""+runtimeDefines[key])+"\";");
+            }
+        }
+        for (var i=0; i&lt;inlineDefines.length; i++) {
+            var def = inlineDefines[i];
+            if (def.substring(0,9) != 'function ' &amp;&amp; def.substring(0,4) != 'var ') {
+                def = "var "+def; // Enforce local
+            }
+            eval(def);
+        }
+        return eval(expr);
+    }).bind(null)(runtimeDefines, inlineDefines, expr);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+case 'put':
+    Preprocessor.PUT.lastIndex = match.index;
+    if ((match2 = Preprocessor.PUT.exec(this.source)) === null) {
+        throw(new Error("Illegal #"+match[2]+": "+this.source.substring(match.index, match.index+this.errorSourceAhead
+)+"..."));
+    }
+    include = match2[1];
+    verbose("  expr: "+match2[1]);
+    include = Preprocessor.<span class="apidocCodeKeywordSpan">evaluate</span>(defines, this.defines, match2[1]);
+    verbose("  value: "+Preprocessor.nlToStr(include));
+    this.source = this.source.substring(0, match.index)+indent+include+this.source.substring(Preprocessor.PUT.lastIndex);
+    Preprocessor.EXPR.lastIndex = match.index + include.length;
+    verbose("  continue at "+Preprocessor.EXPR.lastIndex);
+    break;
+case 'ifdef':
+case 'ifndef':
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.indent" id="apidoc.element.preprocessor.indent">
+        function <span class="apidocSignatureSpan">preprocessor.</span>indent
+        <span class="apidocSignatureSpan">(str, indent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">indent = function (str, indent) {
+    var lines = str.split("\n");
+    for (var i=0; i&lt;lines.length; i++) {
+        lines[i] = indent + lines[i];
+    }
+    return lines.join("\n");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                include = fs.readFileSync(this.baseDir+"/"+include)+"";
+                this.includes[key] = include;
+            }
+        } catch (e) {
+            throw(new Error("Include failed: "+include+" ("+e+")"));
+        }
+    }
+    this.source = this.source.substring(0, match.index)+Preprocessor.<span class="apidocCodeKeywordSpan">indent</span>(include,
+indent)+this.source.substring(Preprocessor.INCLUDE.lastIndex);
+    Preprocessor.EXPR.lastIndex = stack.length &gt; 0 ? stack[stack.length-1].lastIndex : 0; // Start over again
+    verbose("  continue at "+Preprocessor.EXPR.lastIndex);
+    break;
+case 'put':
+    Preprocessor.PUT.lastIndex = match.index;
+    if ((match2 = Preprocessor.PUT.exec(this.source)) === null) {
+        throw(new Error("Illegal #"+match[2]+": "+this.source.substring(match.index, match.index+this.errorSourceAhead
+)+"..."));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.nlToStr" id="apidoc.element.preprocessor.nlToStr">
+        function <span class="apidocSignatureSpan">preprocessor.</span>nlToStr
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nlToStr = function (str) {
+    return '['+str.replace(/\r/g, "").replace(/\n/g, "\\n")+']';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    Preprocessor.PUT.lastIndex = match.index;
+    if ((match2 = Preprocessor.PUT.exec(this.source)) === null) {
+        throw(new Error("Illegal #"+match[2]+": "+this.source.substring(match.index, match.index+this.errorSourceAhead
+)+"..."));
+    }
+    include = match2[1];
+    verbose("  expr: "+match2[1]);
+    include = Preprocessor.evaluate(defines, this.defines, match2[1]);
+    verbose("  value: "+Preprocessor.<span class="apidocCodeKeywordSpan">nlToStr</span>(include));
+    this.source = this.source.substring(0, match.index)+indent+include+this.source.substring(Preprocessor.PUT.lastIndex);
+    Preprocessor.EXPR.lastIndex = match.index + include.length;
+    verbose("  continue at "+Preprocessor.EXPR.lastIndex);
+    break;
+case 'ifdef':
+case 'ifndef':
+case 'if':
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.stripSlashes" id="apidoc.element.preprocessor.stripSlashes">
+        function <span class="apidocSignatureSpan">preprocessor.</span>stripSlashes
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripSlashes = function (str) {
+    // ref: http://phpjs.org/functions/stripslashes/
+    return (str + '').replace(/\\(.?)/g, function (s, n1) {
+        switch (n1) {
+            case '\\': return '\\';
+            case '0': return '\u0000';
+            case '': return '';
+            default: return n1;
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            switch (match[2]) {
+case 'include_once':
+case 'include':
+    Preprocessor.INCLUDE.lastIndex = match.index;
+    if ((match2 = Preprocessor.INCLUDE.exec(this.source)) === null) {
+        throw(new Error("Illegal #"+match[2]+": "+this.source.substring(match.index, match.index+this.errorSourceAhead
+)+"..."));
+    }
+    include = Preprocessor.<span class="apidocCodeKeywordSpan">stripSlashes</span>(match2[2]);
+    if (typeof this.includes[include] !== 'undefined') { // Do we already know it?
+        if (match2[1] === "include_once") {
+            verbose("  skip incl: "+include);
+            include = "";
+        } else {
+            verbose("  incl: "+include);
+            include = this.includes[include];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.toString" id="apidoc.element.preprocessor.toString">
+        function <span class="apidocSignatureSpan">preprocessor.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preprocessor.addSlashes" id="apidoc.module.preprocessor.addSlashes">module preprocessor.addSlashes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.addSlashes.addSlashes" id="apidoc.element.preprocessor.addSlashes.addSlashes">
+        function <span class="apidocSignatureSpan">preprocessor.</span>addSlashes
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSlashes = function (str) {
+    return (str+'').replace(/([\\"'])/g, "\\$1").replace(/\0/g, "\\0");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preprocessor.evaluate" id="apidoc.module.preprocessor.evaluate">module preprocessor.evaluate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.evaluate.evaluate" id="apidoc.element.preprocessor.evaluate.evaluate">
+        function <span class="apidocSignatureSpan">preprocessor.</span>evaluate
+        <span class="apidocSignatureSpan">(runtimeDefines, inlineDefines, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">evaluate = function (runtimeDefines, inlineDefines, expr) {
+    if (typeof inlineDefines === 'string') {
+        expr = inlineDefines;
+        inlineDefines = [];
+    }
+    var addSlashes = Preprocessor.addSlashes;
+    return (function(runtimeDefines, inlineDefines, expr) {
+        for (var key in runtimeDefines) {
+            if (runtimeDefines.hasOwnProperty(key)) {
+                eval("var "+key+" = \""+addSlashes(""+runtimeDefines[key])+"\";");
+            }
+        }
+        for (var i=0; i&lt;inlineDefines.length; i++) {
+            var def = inlineDefines[i];
+            if (def.substring(0,9) != 'function ' &amp;&amp; def.substring(0,4) != 'var ') {
+                def = "var "+def; // Enforce local
+            }
+            eval(def);
+        }
+        return eval(expr);
+    }).bind(null)(runtimeDefines, inlineDefines, expr);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+case 'put':
+    Preprocessor.PUT.lastIndex = match.index;
+    if ((match2 = Preprocessor.PUT.exec(this.source)) === null) {
+        throw(new Error("Illegal #"+match[2]+": "+this.source.substring(match.index, match.index+this.errorSourceAhead
+)+"..."));
+    }
+    include = match2[1];
+    verbose("  expr: "+match2[1]);
+    include = Preprocessor.<span class="apidocCodeKeywordSpan">evaluate</span>(defines, this.defines, match2[1]);
+    verbose("  value: "+Preprocessor.nlToStr(include));
+    this.source = this.source.substring(0, match.index)+indent+include+this.source.substring(Preprocessor.PUT.lastIndex);
+    Preprocessor.EXPR.lastIndex = match.index + include.length;
+    verbose("  continue at "+Preprocessor.EXPR.lastIndex);
+    break;
+case 'ifdef':
+case 'ifndef':
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preprocessor.indent" id="apidoc.module.preprocessor.indent">module preprocessor.indent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.indent.indent" id="apidoc.element.preprocessor.indent.indent">
+        function <span class="apidocSignatureSpan">preprocessor.</span>indent
+        <span class="apidocSignatureSpan">(str, indent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">indent = function (str, indent) {
+    var lines = str.split("\n");
+    for (var i=0; i&lt;lines.length; i++) {
+        lines[i] = indent + lines[i];
+    }
+    return lines.join("\n");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                include = fs.readFileSync(this.baseDir+"/"+include)+"";
+                this.includes[key] = include;
+            }
+        } catch (e) {
+            throw(new Error("Include failed: "+include+" ("+e+")"));
+        }
+    }
+    this.source = this.source.substring(0, match.index)+Preprocessor.<span class="apidocCodeKeywordSpan">indent</span>(include,
+indent)+this.source.substring(Preprocessor.INCLUDE.lastIndex);
+    Preprocessor.EXPR.lastIndex = stack.length &gt; 0 ? stack[stack.length-1].lastIndex : 0; // Start over again
+    verbose("  continue at "+Preprocessor.EXPR.lastIndex);
+    break;
+case 'put':
+    Preprocessor.PUT.lastIndex = match.index;
+    if ((match2 = Preprocessor.PUT.exec(this.source)) === null) {
+        throw(new Error("Illegal #"+match[2]+": "+this.source.substring(match.index, match.index+this.errorSourceAhead
+)+"..."));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preprocessor.nlToStr" id="apidoc.module.preprocessor.nlToStr">module preprocessor.nlToStr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.nlToStr.nlToStr" id="apidoc.element.preprocessor.nlToStr.nlToStr">
+        function <span class="apidocSignatureSpan">preprocessor.</span>nlToStr
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nlToStr = function (str) {
+    return '['+str.replace(/\r/g, "").replace(/\n/g, "\\n")+']';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    Preprocessor.PUT.lastIndex = match.index;
+    if ((match2 = Preprocessor.PUT.exec(this.source)) === null) {
+        throw(new Error("Illegal #"+match[2]+": "+this.source.substring(match.index, match.index+this.errorSourceAhead
+)+"..."));
+    }
+    include = match2[1];
+    verbose("  expr: "+match2[1]);
+    include = Preprocessor.evaluate(defines, this.defines, match2[1]);
+    verbose("  value: "+Preprocessor.<span class="apidocCodeKeywordSpan">nlToStr</span>(include));
+    this.source = this.source.substring(0, match.index)+indent+include+this.source.substring(Preprocessor.PUT.lastIndex);
+    Preprocessor.EXPR.lastIndex = match.index + include.length;
+    verbose("  continue at "+Preprocessor.EXPR.lastIndex);
+    break;
+case 'ifdef':
+case 'ifndef':
+case 'if':
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preprocessor.stripSlashes" id="apidoc.module.preprocessor.stripSlashes">module preprocessor.stripSlashes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.stripSlashes.stripSlashes" id="apidoc.element.preprocessor.stripSlashes.stripSlashes">
+        function <span class="apidocSignatureSpan">preprocessor.</span>stripSlashes
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripSlashes = function (str) {
+    // ref: http://phpjs.org/functions/stripslashes/
+    return (str + '').replace(/\\(.?)/g, function (s, n1) {
+        switch (n1) {
+            case '\\': return '\\';
+            case '0': return '\u0000';
+            case '': return '';
+            default: return n1;
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            switch (match[2]) {
+case 'include_once':
+case 'include':
+    Preprocessor.INCLUDE.lastIndex = match.index;
+    if ((match2 = Preprocessor.INCLUDE.exec(this.source)) === null) {
+        throw(new Error("Illegal #"+match[2]+": "+this.source.substring(match.index, match.index+this.errorSourceAhead
+)+"..."));
+    }
+    include = Preprocessor.<span class="apidocCodeKeywordSpan">stripSlashes</span>(match2[2]);
+    if (typeof this.includes[include] !== 'undefined') { // Do we already know it?
+        if (match2[1] === "include_once") {
+            verbose("  skip incl: "+include);
+            include = "";
+        } else {
+            verbose("  incl: "+include);
+            include = this.includes[include];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.preprocessor.toString" id="apidoc.module.preprocessor.toString">module preprocessor.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.preprocessor.toString.toString" id="apidoc.element.preprocessor.toString.toString">
+        function <span class="apidocSignatureSpan">preprocessor.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
