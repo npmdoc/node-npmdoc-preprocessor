@@ -1,4 +1,7 @@
-# api documentation for  [preprocessor (v1.4.0)](https://github.com/dcodeIO/Preprocessor.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-preprocessor.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-preprocessor) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-preprocessor.svg)](https://travis-ci.org/npmdoc/node-npmdoc-preprocessor)
+# npmdoc-preprocessor
+
+#### basic api documentation for  [preprocessor (v1.4.0)](https://github.com/dcodeIO/Preprocessor.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-preprocessor.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-preprocessor) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-preprocessor.svg)](https://travis-ci.org/npmdoc/node-npmdoc-preprocessor)
+
 #### Preprocessor.js: A JavaScript source file preprocessor, e.g. to build different versions of a library.
 
 [![NPM](https://nodei.co/npm/preprocessor.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/preprocessor)
